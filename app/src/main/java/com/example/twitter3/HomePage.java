@@ -28,7 +28,7 @@ public class HomePage extends AppCompatActivity {
         //aca se llama al metodo addFragment creado en la clase ViewPageAdapters donde se añaden los Fragmentos/Tabs
         adapter.addFragments(new TimelineFragment(),"TIMELINE");
         adapter.addFragments(new TweetsFragment(),"TWEETS");
-        adapter.addFragments(new DirectMessagesFragments(),"DIRECT MESSAGES");
+
 
         //Configurando el adapter
         viewPager.setAdapter(adapter);
