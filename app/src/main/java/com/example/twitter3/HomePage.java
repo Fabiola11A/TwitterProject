@@ -40,7 +40,7 @@ public class HomePage extends AppCompatActivity {
         Toast.makeText(HomePage.this,use, Toast.LENGTH_LONG).show();
     }
 
-    public void goFinalActivity(View view) {
+    public void goFinalActivity(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
         Intent intent = new Intent( this, HomePage.class);
         startActivity(intent);
     }
