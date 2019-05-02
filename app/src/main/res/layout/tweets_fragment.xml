@@ -2,24 +2,86 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TWEETS"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="40dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="84dp"
-        android:background="@drawable/button_shape"
-        android:drawableLeft="@drawable/baseline_navigate_before_white_18dp"
-        android:gravity="center"
-        android:onClick="goFinalActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="150dp"
+                android:background="@color/colorPrimary"
+                android:text="Tweet"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColorLink="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="What´s Happening?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_mapmode" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_input_add" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/button_shape"
+            android:drawableLeft="@drawable/baseline_navigate_before_white_18dp"
+            android:gravity="center"
+            android:onClick="goFinalActivity" />
+
+    </LinearLayout>
 
 
 </LinearLayout>
