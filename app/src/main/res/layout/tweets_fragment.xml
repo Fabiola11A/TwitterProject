@@ -13,12 +13,13 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
         android:layout_marginTop="84dp"
+        android:background="@drawable/button_shape"
+        android:drawableLeft="@drawable/baseline_navigate_before_white_18dp"
         android:gravity="center"
-        android:onClick="goFinalActivity"
-        android:text="Button" />
+        android:onClick="goFinalActivity" />
 
 
 </LinearLayout>
