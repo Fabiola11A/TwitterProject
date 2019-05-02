@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//Clase que manejar las clases de Fragments
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     //Variables
