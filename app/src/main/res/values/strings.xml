@@ -2,4 +2,16 @@
     <string name="app_name">Twitter3</string>
     <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">NDvcr03jJp6cSmDXPlYHHxmYd</string>
     <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">TcjVjRCexI3643JyVzebGNU2mN09k0f93MkcBwNMMoYkzxTDkL</string>
+
+    <string name="search_twitter">Search Twitter</string>
+    <string name="no_tweets">No Tweets</string>
+
+    <!-- string array for Tab items -->
+    <string-array name="tab_items">
+        <item>User Timeline</item>
+        <item>Search Timeline</item>
+        <item>Collection Timeline</item>
+    </string-array>
+
+
 </resources>
