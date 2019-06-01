@@ -8,6 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.twitter.sdk.android.core.TwitterCore;
+import com.twitter.sdk.android.core.TwitterSession;
+import com.twitter.sdk.android.tweetcomposer.ComposerActivity;
+
 
 public class HomePage extends AppCompatActivity {
 
@@ -38,7 +42,17 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void goFinalActivity(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
-        Intent intent = new Intent( this, HomePage.class);
+        final TwitterSession session = TwitterCore.getInstance().getSessionManager()
+                .getActiveSession();
+        final Intent intent = new ComposerActivity.Builder(this)
+                .session(session)
+                .text(String.valueOf(R.id.button))
+                .hashtags("#twitter")
+                .createIntent();
         startActivity(intent);
+    }
+
+    private void tweets(View view){
+
     }
 }
