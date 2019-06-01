@@ -27,7 +27,8 @@
                 android:background="@color/colorPrimary"
                 android:text="Tweet"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColorLink="@color/colorPrimary" />
+                android:textColorLink="@color/colorPrimary"
+                android:onClick="tweets"/>
 
         </LinearLayout>
 

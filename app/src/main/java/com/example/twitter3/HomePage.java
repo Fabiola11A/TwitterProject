@@ -41,18 +41,27 @@ public class HomePage extends AppCompatActivity {
         Toast.makeText(HomePage.this,use, Toast.LENGTH_LONG).show();
     }
 
-    public void goFinalActivity(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
+
+    public void tweets(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
         final TwitterSession session = TwitterCore.getInstance().getSessionManager()
                 .getActiveSession();
         final Intent intent = new ComposerActivity.Builder(this)
                 .session(session)
-                .text(String.valueOf(R.id.button))
+                .text(String.valueOf(R.id.button3))
                 .hashtags("#twitter")
                 .createIntent();
         startActivity(intent);
     }
 
-    private void tweets(View view){
 
+
+
+    public void goFinalActivity(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
+        Intent intent = new Intent( this, HomePage.class);
+        startActivity(intent);
     }
+
+
+
+
 }
