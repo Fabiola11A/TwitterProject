@@ -55,3 +55,5 @@ public class MyPreferenceManager {
         return sharedPreferences.getString(SCREEN_NAME, "");
     }
 }
+
+

@@ -32,7 +32,6 @@ public class HomePage extends AppCompatActivity {
         adapter.addFragments(new UserTimelineFragment(),"TIMELINE");
         adapter.addFragments(new TweetsFragment(),"TWEETS");
 
-
         //Configurando el adapter
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -52,8 +51,6 @@ public class HomePage extends AppCompatActivity {
                 .createIntent();
         startActivity(intent);
     }
-
-
 
 
     public void goFinalActivity(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
