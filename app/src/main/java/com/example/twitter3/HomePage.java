@@ -1,11 +1,14 @@
 package com.example.twitter3;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.twitter.sdk.android.core.TwitterCore;
@@ -19,12 +22,16 @@ public class HomePage extends AppCompatActivity {
 
     private ViewPager viewPager;
 
+    private ImageView imageView;
+    private static final int REQUEST_IMAGE_CAPTURE = 101;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
 
         tabLayout=(TabLayout)findViewById(R.id.tabLayoutId);// asocio con el id que se le da en la vista del xml
+
 
         viewPager= (ViewPager)findViewById(R.id.viewPagerId);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());// Me falta de entender bien este metodo
@@ -41,7 +48,10 @@ public class HomePage extends AppCompatActivity {
     }
 
 
+
     public void tweets(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
+
+
         final TwitterSession session = TwitterCore.getInstance().getSessionManager()
                 .getActiveSession();
         final Intent intent = new ComposerActivity.Builder(this)
@@ -51,6 +61,10 @@ public class HomePage extends AppCompatActivity {
                 .createIntent();
         startActivity(intent);
     }
+
+
+
+
 
 
     public void goFinalActivity(View view) {/// Método que me envía o redirige hacia una vista que maneja una clase
